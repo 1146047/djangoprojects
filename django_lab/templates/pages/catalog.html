@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>測試頁面</h1>
+    <span>Hello {{data}}</span><br>
+    {% if data > 10 %}
+        <div>超過10了</div>
+    {% else %}
+        <div>沒有大於10</div>
+    {% endif %}
+    <span>product:{{ products }}</span><br>
+    {% for prod in products %}
+        <label><input name="prods" type="radio" value="{{prod}}">{{forloop.counter}}-{{prod}}</label><br>
+    {% empty %}
+        <div>沒有東西</div>
+    {% endfor %}
+    <div>字典</div>
+    <div>{{ mydict.name }},{{ mydict.age }}</div> 
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+    <head>
+        <meta charset="utf-8">
+        <title>⾃我介紹</title>
+        <style>
+            h1{
+                color: rgb(168, 128, 40);
+                font-size: 28pt;
+            }
+            .card{
+                padding: 16px;
+                border: 4px solid #8ec13b;
+                margin-bottom: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>大家好 我是OOO</h1>
+        <form action="/search/" method="get">
+            <fieldset>
+                <label>帳號:</label>
+                <input type="text" name="username" value="leon" required><br>
+                <input type="hidden" name="myhide" value="hiden">
+                <label>密碼:</label>
+                <input type="password" name="password" placeholder="密碼"><br>
+            </fieldset>
+            <label>暱稱:</label>
+            <input type="text" name="nickname" required minlength="2" maxlength="20"
+                pattern="[A-Za-z0-9_]+"
+                title="只能使用英文字母、數字、底線"><br>
+
+            <label>年齡:</label>
+            <input type="number" name="number" value="18"><br>
+            <label>生日:</label>
+            <input type="date" name="mdate" value="2026-05-01"><br>
+            <label for="volume">提醒音量</label>
+            <input id="volume" type="range" name="volume" min="0" max="100" step="5" value="50"><br>
+            <label>評價:</label>
+            
+            <select name="rating">
+                <option value="5">★★★★★</option>
+                <option value="4">★★★★</option>
+            </select>
+
+            <br>
+            <input name="username" value="ame" readonly><br>
+            <input name="coupon" value="VIP100" disabled>
+            <br>
+
+            <fieldset>
+                <legend>配送方式</legend>
+
+                <label><input type="radio" name="delivery" value="store" checked required>超商取貨</label>
+                <label><input type="radio" name="delivery" value="home">宅配</label>
+                <input id="isf" type="radio" name="delivery" value="freeze">
+                <label for="isf">冷凍</label>
+                <p></p>
+                <label><input type="checkbox" name="topics" value="html" checked>Html</label>
+                <label><input type="checkbox" name="topics" value="django" >Django</label>
+            </fieldset>
+
+
+            <textarea name="comment" rows="3" placeholder="分享⼼得"></textarea>
+            <br>
+            <label for="images">商品圖片:</label>
+            <input id="images" type="file" name="images" accept="image/png, image/jpeg, .pdf"><br>
+
+            <input class='card' type="reset" name="reset" value="重置">
+            <br>
+            <button class="card" type="submit" name="submit">送出</button>
+        </form>
+    </body>
+</html>
